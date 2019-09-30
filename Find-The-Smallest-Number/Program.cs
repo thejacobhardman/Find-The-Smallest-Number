@@ -10,30 +10,29 @@ namespace Find_The_Smallest_Number
     {
         static void Main(string[] args)
         {
-            int[] numArr = new int[0];
+            List<int> numList = new List<int>();
             int minNum;
             int num;
             int counter;
 
-            Console.WriteLine("Please enter the number of integers that you'd like to compare: ");
+            Console.Write("Please enter the number of integers that you'd like to compare: ");
             counter = Convert.ToInt32(Console.ReadLine());
 
             for (int i = 0; i < counter; i++)
             {
-                Console.WriteLine("Enter integer: ");
+                Console.Write("Enter integer: ");
                 num = Convert.ToInt32(Console.ReadLine());
 
-                numArr.Append(num);
-                Console.WriteLine(numArr);
+                numList.Add(num);
             }
 
-            minNum = numArr[0];
+            minNum = numList[0];
 
-            for (int i = 0; i < numArr.Length; i++)
+            for (int i = 0; i < numList.Count; i++)
             {
-                if (numArr[i] < minNum)
+                if (numList[i] < minNum)
                 {
-                    minNum = numArr[i];
+                    minNum = numList[i];
                 }
             }
 
